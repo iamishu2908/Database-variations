@@ -51,16 +51,18 @@ FETCH FIRST 10 rows only; -- fetches next 10 rows
 - ![image](https://github.com/user-attachments/assets/fe2ec5e8-49ed-40c8-8436-c99fffea0b57)
 
 - add / drop the columns
-  
-- ALTER TABLE categories
-ADD category_type VARCHAR (255) NOT NULL
-
--ALTER TABLE categories
-DROP column category_type;
+- 	 ALTER TABLE categories
+  ADD category_type VARCHAR (255) NOT NULL
+- 	ALTER TABLE categories
+  DROP column category_type;
 
 
 -- TRUNCATE preserves the data stucture and deletes only the data. no need to create again
 -- DROP deletes the data and the structure of the database
+
+
+- Datatypes in MS SQL:
+- ![image](https://github.com/user-attachments/assets/b06ef308-6d7b-4f67-893c-e303f5a2c862)
 
 
    
