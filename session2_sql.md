@@ -95,6 +95,18 @@ ON s.store_id = o.order_id;
 
 - To learn more about constraints: https://learn.microsoft.com/en-us/sql/relational-databases/tables/primary-and-foreign-key-constraints?view=sql-server-ver16
 
+- write about **insert, update,delete, and few more here**
+
+
+
+- 
+
 ## other
 - update query updates the table and this cannot be rolledback.
-- 
+## Merge function
+
+## Transactions
+  - to perform multiple operations at the same time -> 2 insertions, 1 updateand if an operation failed, we can rollback tracnsaction is a single unit of work that typically contians multiple queires
+  - set of queries executed together
+  - these are especially used on dependent systems where outcome of one scenario depends on another
+  - 
