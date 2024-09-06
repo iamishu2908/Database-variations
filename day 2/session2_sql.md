@@ -95,7 +95,12 @@ ON s.store_id = o.order_id;
 
 - To learn more about constraints: https://learn.microsoft.com/en-us/sql/relational-databases/tables/primary-and-foreign-key-constraints?view=sql-server-ver16
 
-- write about **insert, update,delete, and few more here**
+## dml commands
+### insert
+- to write a combination of insert AND select command
+- to directly insert rows from another table
+> _insert_ into dbo.address(street, city,state,zip_code) _select_ street, city,state,zip_code from sales.customers
+
 
 
 
@@ -106,6 +111,8 @@ ON s.store_id = o.order_id;
 ## Merge function
 
 ## Transactions
+![image](https://github.com/user-attachments/assets/38bb4214-f3a5-4b3f-97fe-90ea8101455c)
+
   - to perform multiple operations at the same time -> 2 insertions, 1 updateand if an operation failed, we can rollback tracnsaction is a single unit of work that typically contians multiple queires
   - set of queries executed together
   - these are especially used on dependent systems where outcome of one scenario depends on another
