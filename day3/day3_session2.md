@@ -110,5 +110,29 @@ print(@columns)
 
 - ![image](https://github.com/user-attachments/assets/a7fbe110-c61b-4ca6-8f9f-06cda8b8b698)
 
+- error in below code:
+- ![image](https://github.com/user-attachments/assets/d062bea8-95b0-4f03-a354-4b02d57babc4)
+- this works correct:
+- 
+CREATE PROCEDURE sp_pivot_products AS 
+BEGIN
+    DECLARE
+        @columns NVARCHAR(MAX) = '',
+        @sql NVARCHAR(MAX) = '';
+
+    -- Build the list of columns for the PIVOT dynamically
+    SELECT 
+        @columns += QUOTENAME(category_name) + ',' 
+    FROM
+        production.categories
+    ORDER BY 
+        category_name;
+
+    -- Remove the trailing comma from the columns string
+    SET @columns = LEFT(@columns, LEN(@columns) - 1);
+
+    -- Construct the dynamic SQL query
+    SET @sql = '
+
 
 
