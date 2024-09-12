@@ -134,5 +134,6 @@ BEGIN
     -- Construct the dynamic SQL query
     SET @sql = '
 
+use EXEC sp_executesql @sql; at the end
 
 
